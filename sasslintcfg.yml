@@ -1,0 +1,12 @@
+{
+  rules: {
+    'no-ids': 0, // Severity 0 (disabled)
+    'no-mergeable-selectors': 1, // Severity 1 (warning)
+    'hex-length': [
+      2, // Severity 2 (error)
+      {
+        'style': 'long'
+      }
+    ]
+  }
+}
