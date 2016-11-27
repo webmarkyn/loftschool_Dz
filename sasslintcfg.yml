@@ -1,0 +1,11 @@
+{
+  rules: {
+    'no-ids': 0,
+    'no-mergeable-selectors': 1,
+    'hex-length': [
+      {
+        'style': 'long'
+      }
+    ]
+  }
+}

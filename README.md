@@ -1,4 +1,21 @@
-#Учебная сборка Loftschool (выпускной проект №1) 
+Author: Baidebura Mark
+
+Description:
+    This setup provides you such functions as:
+    
+        -SASS,PUG Compile;
+        
+        -normilize.css
+        
+        -css,js minimise
+        
+        -copying fonts and images from source to final build folder
+        
+        -creating sprites from your images and svg's
+        
+        -track changes in choosen files
+        
+        -browsersync
 
 Stack:
  - Gulp 4.0
