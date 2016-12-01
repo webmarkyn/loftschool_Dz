@@ -1,2 +1,30 @@
-@import 'common/greating';
+*{
+  box-sizing: border-box;
+  outline: none;
+}
+html,body{
+  height: 100%;
+  width: 100%;
+}
+.clearfix {
+    zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+//mixins
+@import 'mixins/font-face';
+
+//styles
+@import 'common/works';
+@import 'common/login';
+@import 'common/fonts';
+
+
+
 

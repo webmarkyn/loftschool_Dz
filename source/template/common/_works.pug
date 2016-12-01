@@ -1,0 +1,78 @@
+.container
+    include ../partials/__header
+    
+    .works
+        .works__slide-info
+            .works__slide-info__container
+                span.works__slide-info__container__slide-name.separator Сайт школы онлайн образования
+                span.works__slide-info__container__technologies HTML,CSS,JAVASCRIPT
+                a(href="#").works__slide-info__container__watch-button
+                    i.fa.fa-link
+                    |Посмотреть сайт
+        .works__slider
+            .works__slider__current-slide
+                .works__slider__current-slide__image
+                    img(src="/assets/img/slider/work-1.png", alt="").current-slide
+            .works__slider__navigation
+                .works__slider__navigation__previous
+                    img(src="/assets/img/slider/work-2.png", alt="").previous-slide
+                    svg
+                        use(xlink:href="assets/img/sprite.svg#portf_arrow_down")
+                .works__slider__navigation__next
+                    img(src="/assets/img/slider/work-3.png", alt="").next-slide
+                    svg
+                        use(xlink:href="assets/img/sprite.svg#portf_arrow_up")
+
+
+
+
+    .about-me
+        .about-me__block-title
+            svg.svg-title
+                use(xlink:href="assets/img/sprite.svg#about_header")
+            h3.title.separator 
+                span ЧТО ОБО МНЕ ГОВОРЯТ
+        .about-me__comments.clearfix
+            .about-me__comments__first-comment
+                .comment-avatar-holder.personal-info__avatar
+                    img(src="/assets/img/avatars/avatar_dima.png", alt="").avatar
+                .comment
+                    span.comment__text 
+                        |Этот парень проходил обучение веб-разработке не где-то,
+                        | а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                    span.comment__author Ковальчук Дмитрий
+                    span.comment__position — основатель Loftschool
+            .about-me__comments__second-comment
+                .comment-avatar-holder.personal-info__avatar
+                    img(src="/assets/img/avatars/avata_zakharovr.png", alt="").avatar
+                .comment
+                    span.comment__text 
+                        |Этот код выдержет любые испытания. Только пожалуйста,
+                        | не загружается сайт на слишком старых браузерах!
+                    span.comment__author Зар Захаров
+                    span.comment__position — преподаватель
+        .contact-wrap
+            .contact-box
+                h2.separator СВЯЗАТЬСЯ СО МНОЙ
+                form.login-form(
+                    name='login-form'
+                    method='post'
+                )
+                    input#name(
+                        type='text'
+                        placeholder='Имя'
+                    )
+                    input#email(
+                        type='password'
+                        placeholder='Email'
+                    )
+                    textarea#message(name='text' placeholder='Ваше сообщение')
+            .login-form-buttons
+                button.login-form-button Отправить
+                button.login-form-button Очистить
+        .arrow-up
+            a.arrow-up__link
+                svg.arrow-up__link__svg
+                    use(xlink:href="assets/img/sprite.svg#portf_arrow_up")
+
+    include ../partials/__footer
