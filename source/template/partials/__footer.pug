@@ -1,3 +1,4 @@
+- var droids = ["R2D2", "C3PO", "BB8"];
 .footer
     .footer__main
         .footer__main__info
@@ -6,14 +7,9 @@
         .footer__main__nav-and-socials
             .footer__main__nav-and-socials__nav
                 ul.footer-nav
-                    li.footer-nav__item 
-                        a(href="") Мои работы
-                    li.footer-nav__item 
-                        a(href="") Обо мне
-                    li.footer-nav__item 
-                        a(href="") Блог
-                    li.footer-nav__item 
-                        a(href="") Авторизация
+                    each item in pages
+                        li.footer-nav__item
+                            a(href="")= item
             .footer__main__nav-and-socials__socials
                 include ../partials/__social-icons
         .footer__main__quote

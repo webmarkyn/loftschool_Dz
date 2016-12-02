@@ -404,6 +404,7 @@
             text-align: center;
             width: 100%;
             color: #373e42;
+            text-transform: uppercase;
         }
         & .svg-title{
             position: absolute;
@@ -520,6 +521,7 @@
         font-family: Sansus, sans-serif;
         text-align: center;
         position: relative;
+        text-transform: uppercase;
       }
     .login-form-buttons{
       width: 380px;
@@ -649,6 +651,7 @@
                     &:hover{
                         fill: #FFF;
                         opacity: 1;
+                        transition: 0s;
                     }
                 }
             }
