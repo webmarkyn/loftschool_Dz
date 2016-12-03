@@ -5,7 +5,7 @@
     position: relative;
 }
 .header{
-    height: 740px;
+    height: 100vh;
     background: url("../img/backgrounds/water.jpg");
     background-size: cover;
     position: relative;
@@ -16,7 +16,7 @@
         left: -150%;
         height: 340px;
         position: absolute;
-        bottom: 143px;
+        bottom: 144px;
         
         @media screen and (min-width: 720px) and (max-width: 1366px) {
             width: 300%;
@@ -36,7 +36,7 @@
         }
 
         &__page-title{
-            margin-top: 86px;
+            margin-top: 31vh;
             width: 100%;
             height: 144px;
             background: #f8f9f5;
