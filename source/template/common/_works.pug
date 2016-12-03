@@ -22,10 +22,6 @@
                     img(src="/assets/img/slider/work-3.png", alt="").next-slide
                     svg
                         use(xlink:href="assets/img/sprite.svg#portf_arrow_up")
-
-
-
-
     .about-me
         .about-me__block-title
             svg.svg-title
@@ -67,9 +63,9 @@
                         placeholder='Email'
                     )
                     textarea#message(name='text' placeholder='Ваше сообщение')
-            .login-form-buttons
-                button.login-form-button Отправить
-                button.login-form-button Очистить
+                    .login-form-buttons
+                        button.login-form-button(type="submit") Отправить
+                        button.login-form-button(type="reset") Очистить
         .arrow-up
             a.arrow-up__link
                 svg.arrow-up__link__svg

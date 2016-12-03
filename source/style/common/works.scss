@@ -3,6 +3,7 @@
     width: 100%;
     min-width: 360px;
     position: relative;
+    overflow: hidden;
 }
 .header{
     height: 100vh;
@@ -42,6 +43,8 @@
             background: #f8f9f5;
             float: left;
             position: relative;
+            position: absolute;
+            bottom: 0;
 
             &__svg{
                 margin: 0 auto;
@@ -246,6 +249,7 @@
             height: 250px;
             margin-top: 245px;
             font-family: "Roboto";
+            text-transform: uppercase;
             
 
             & span{
@@ -386,6 +390,7 @@
     float: left;
     height: 1355px;
     width: 100%;
+    overflow: hidden;
     background: url("/assets/img/backgrounds/what_about_bg.png");
     background-size: cover;
     position: relative;
@@ -400,7 +405,7 @@
             font-family: "Sansus";
             font-size: 63px;
             margin: 0;
-            padding: 70px 0 0 0;
+            padding: 55px 0 0 0;
             text-align: center;
             width: 100%;
             color: #373e42;
@@ -418,9 +423,10 @@
     }
 
     &__comments{
-        padding-top: 30px;
-        width: 760px;
+        padding-top: 13px;
+        width: 787px;
         margin: 0 auto;
+        margin-bottom: 75px;
 
         &__first-comment{
             float: left;
@@ -428,7 +434,7 @@
 
         &__second-comment{
             float: left;
-            padding-left: 20px;
+            margin-left: 20px;
         }
 
         &__first-comment, &__second-comment{
@@ -449,7 +455,8 @@
                 color: #2d2c2c;
                 font-family: "Roboto-Italic";
                 font-size: 16px;
-                line-height: 21px;
+                line-height: 23px;
+                float: left;
 
                 &__text{
                     float: left;
@@ -476,18 +483,19 @@
     // Contact
   .contact-wrap{
     width: 380px;
-    height: 527px;
+    height: 461px;
     overflow: auto;
     margin: auto;
     box-sizing: border-box;
     font-family: Roboto;
-    margin-top: 70px;
+    position: relative;
   
     .contact-box{
+      height: 416px;
       float: left;
       background: rgba(#e0e0dc, 0.6);
       color: #566358;
-      padding: 40px 20px 20px 20px;
+      padding: 28px 20px 20px 20px;
       border-radius: 5px;
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
@@ -505,7 +513,7 @@
           float: right;
         }
         & #message{
-            padding: 10px 20px;
+            padding: 13px 19px;;
             width: 100%;
             font-size: 16px;
             border-radius: 20px;
@@ -517,16 +525,19 @@
     }
       & h2{
         font-size: 35px;
-        margin: 0 0 60px 0;
+        margin: 0 0 58px 0;
         font-family: Sansus, sans-serif;
         text-align: center;
         position: relative;
         text-transform: uppercase;
       }
     .login-form-buttons{
-      width: 380px;
-      height: 45px;
-      margin: auto;
+        width: 380px;
+        height: 45px;
+        margin: auto;
+        position: absolute;
+        left: 0;
+        bottom: 0;
 
         & .login-form-button{
           border: none;
@@ -554,9 +565,11 @@
     }
   }
 .arrow-up{
-    margin: 0 auto;
+    margin-top: 67px;
     width: 27px;
     height: 17px;
+    margin-right: auto;
+    margin-left: auto;
 
     &__link{
         float: left;
@@ -588,17 +601,16 @@
                     margin-left: -45px;
                 }
 .footer{
-    height: 185px;
     position: absolute;
     bottom: 0;
     width: 100%;
 
     &__main{
-        height: 147px;
         width: 100%;
         background: #373e42;
         opacity: .85;
         padding: 30px;
+        float: left;
 
         &__info, &__nav-and-socials, &__quote{
             width: 33.3%;
@@ -609,6 +621,7 @@
         }
 
         &__info{
+                min-height: 8vh;
 
             & span{
                 float: left;
@@ -680,5 +693,6 @@
         line-height: 38px;
         color: #ffffff;
         text-align: center;
+        float: left;
     }
 }
