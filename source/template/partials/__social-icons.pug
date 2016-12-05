@@ -1,0 +1,6 @@
+.social-icons
+    - var icons = ['vk', 'github', 'in'];
+    each icon in icons
+        a(href="").icon-holder.icon-link
+            svg.social-icons_sprite.custom-icon(viewBox="0 0 35 35")
+                use.social-icons_sprite__item(xlink:href="assets/img/sprite.svg#" + icon)

@@ -1,0 +1,15 @@
+//Roboto
+@include font-face("Roboto-Bold", "../fonts/Roboto-Bold", ttf, bold, normal);
+@include font-face("Roboto-BoldItalic", "../fonts/Roboto-BoldItalic", ttf, bold, italic);
+@include font-face("Roboto-Italic", "../fonts/Roboto-Italic", ttf, normal, italic);
+@include font-face("Roboto-Light", "../fonts/Roboto-Light", ttf, lighter, normal);
+@include font-face("Roboto-LightItalic", "../fonts/Roboto-LightItalic", ttf, lighter, italic);
+@include font-face("Roboto-Medium", "../fonts/Roboto-Medium", ttf, 500, italic);
+@include font-face("Roboto-MediumItalic", "../fonts/Roboto-MediumItalic", ttf, 500, italic);
+@include font-face("Roboto-Regular", "../fonts/Roboto-LightItalic", ttf, 400, normal);
+
+//Sansus
+@include font-face("Sansus", "../fonts/Sansus-Webissimo-Regular", ttf, 400, normal);
+
+//Font awesome
+@include font-face("FontAwesome", "../fonts/fontawesome-webfont", ttf, lighter, italic);

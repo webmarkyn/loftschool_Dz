@@ -1,0 +1,42 @@
+.wrapper
+    include ../partials/__top-shadow
+    .bottom-shadow
+    .login-wrap
+        .login-box
+            h2.separator Авторизуйтесь
+            form.login-form(
+                name='login-form'
+                method='post'
+            )
+                label(for='login')
+                    i.fa.fa-user
+                input#login(
+                    type='text'
+                    placeholder='Логин'
+                )
+                label(for='password')
+                    i.fa.fa-key
+                input#password(
+                    type='password'
+                    placeholder='Пароль'
+                )
+                input(type='checkbox')#arentrobot
+                label(for='arentrobot') Я человек
+                span Вы точно не робот?
+                input#yes(
+                    type='radio'
+                    name='robot_security'
+                    value='Yes'
+                )
+                label.login-radio(for='yes') Да
+                input#no(
+                    type='radio'
+                    name='robot_security'
+                    value='No'
+                )
+                label.login-radio(for='no') Не уверен
+        .login-form-buttons
+            button.login-form-button На главную
+            button.login-form-button Войти
+
+

@@ -1,0 +1,29 @@
+.header
+        include ../partials/__top-shadow
+        .header__svg-background-block
+                svg.svg-background
+                        use(xlink:href="assets/img/sprite.svg#portfolio_header")
+        .menu
+            .menu_container
+                include ../partials/__social-icons
+                .menu__icon
+                        a.menu__link(href="")
+                                svg.menu-svg.hamburger()
+                                        use(xlink:href="assets/img/sprite.svg#hamburger")  
+        include ../partials/__personal-info
+        
+        .header__triangle
+                svg.triangle(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 1000 85', preserveaspectratio='none')
+                        polygon.left(points='0,0   0,86   500.8,86   500.8,75.5')
+                        polygon.right(points='1000,0   1000,86   500,86   500,75.5')
+        .down-arrow-button.clearfix
+                a.down-arrow-button__link
+                        svg.down-arrow-button__link__svg()
+                                use(xlink:href="assets/img/sprite.svg#arrow_down")
+        .header__page-title
+                .header__page-title__svg
+                        #{title_private}
+                        svg.svg-page-title
+                                use(xlink:href="assets/img/sprite.svg#" + title_private + "_header")
+                .header__page-title__page-name 
+                        span.page-name #{title_public}
