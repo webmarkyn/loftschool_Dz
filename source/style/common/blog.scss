@@ -1,0 +1,175 @@
+.container{
+	font-family: "Roboto";
+}
+.description{
+	position: absolute;
+	height: 20.875rem;
+	width: 13.75rem;
+	left: 0;right: 0; top: 0;bottom: 0;
+	margin: auto;
+	color: #FFF;
+	text-align: center;
+	
+	&__avatar{
+		width: 8.75rem;
+		height: 8.75rem;
+		margin: 0 auto;
+		overflow: hidden;
+		border-radius: 50%;
+	}
+	
+	&__title{
+		position: relative;
+		text-transform: uppercase;
+		font-family: "Sansus";
+		font-size: 4rem;
+		letter-spacing: 0.3rem;
+		margin: 2rem 0 3.75rem 0;
+		
+		&:after{
+			background: #FFF;
+		}
+	}
+}
+.blog-main{
+	width: 75vw;
+	max-width: 75rem;
+	margin: 0 auto;
+	font-family: "Roboto";
+
+	@include tablet{
+		width: 100%;
+	}
+
+	@include phone{
+		width: 100%;
+	}
+	
+}
+
+.swipe-box{
+	position: fixed;
+    top: 50%;
+    margin-top: -1.3rem;
+    height: 2.6rem;
+    width: 6%;
+    left: -3%;
+    background: #6c9c5a;
+    border-radius: 50%;
+    display: none;
+    z-index: 30;
+
+    @include phone{
+		display: block;
+	}
+}
+
+.blog-inner{
+	margin: 0 8.3% 0 16.6%;
+
+	@include desktop{
+		margin: 0 8.3% 0 33.3%;
+	}
+
+	@include tablet{
+		margin: 0 3% 0 3%;
+	}
+
+	@include phone{
+		margin: 0 3% 0 3%;
+	}
+}
+
+.post{
+	color: #455a64;
+	padding: 0 0 4.4rem 0;
+	position: relative;
+	margin-bottom: 3.75rem;
+
+	@include phone{
+		padding: 0 0 1.4rem 0;
+		margin-bottom: 1.75rem;
+	}
+	
+	
+	&:after{
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		height: 0.3rem;
+		width: 42.5rem;
+		background: #373e42;
+		opacity: .07
+	}
+	
+	&:last-child{
+		padding: 0;
+		
+		&:after{
+			display: none;
+		}
+	}
+	
+	&__header{
+		
+		&__title{
+			font-size: 2.25rem;
+			font-family: "Sansus";
+			margin-bottom: 0;
+
+			@include phone{
+				font-size: 1.65rem;
+			}
+		}
+		
+		&__date{
+			color: #4e8839;
+			opacity: .7;
+		}
+	}
+}
+.blog-sidebar{
+	color: #455a64;
+	top: 100vh;
+    margin-top: 2.8rem;
+    position: absolute;
+    width: 22vw;
+	float: right;
+	text-align: right;
+
+	@include tablet{
+		display: none;
+	}
+
+	@include phone{
+		display: none;
+	}
+	
+	&__posts-list{
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		
+		&__item{
+		    max-width: 15.5rem;
+		    margin-bottom: 1.5rem;
+		    float: right;
+		    margin-left: 2%;
+					
+			&__active{
+				border-right: 3px solid #6c9c5a;
+				padding: 1rem 0.625rem;
+				font-family: "Roboto-Bold";
+				color: #6c9c5a;
+			}
+		}
+	}
+}
+.footer-custom{
+	position: static;
+	
+	& footer__main{
+		opacity: 1;
+	}
+}

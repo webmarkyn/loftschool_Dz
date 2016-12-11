@@ -6,7 +6,7 @@
 @include font-face("Roboto-LightItalic", "../fonts/Roboto-LightItalic", ttf, lighter, italic);
 @include font-face("Roboto-Medium", "../fonts/Roboto-Medium", ttf, 500, italic);
 @include font-face("Roboto-MediumItalic", "../fonts/Roboto-MediumItalic", ttf, 500, italic);
-@include font-face("Roboto-Regular", "../fonts/Roboto-LightItalic", ttf, 400, normal);
+@include font-face("Roboto", "../fonts/Roboto-Regular", ttf, 400, normal);
 
 //Sansus
 @include font-face("Sansus", "../fonts/Sansus-Webissimo-Regular", ttf, 400, normal);

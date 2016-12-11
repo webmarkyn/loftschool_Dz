@@ -1,8 +1,5 @@
-.header#header
+.header
         include ../partials/__top-shadow
-        .header__svg-background-block
-                svg.svg-background
-                        use(xlink:href="assets/img/sprite.svg#portfolio_header")
         .menu
             .menu_container
                 include ../partials/__social-icons
@@ -10,14 +7,14 @@
                         a.menu__link(href="")
                                 svg.menu-svg.hamburger()
                                         use(xlink:href="assets/img/sprite.svg#hamburger")  
-        include ../partials/__personal-info
+        .description
+            .description__avatar
+                img.description__avatar__img(src='assets/img/avatars/avatar_mark.png', alt='')
+            h2.description__title.separator Блог
+            span.description__text Статьи, которые я написал
+
         
         .header__triangle
                 svg.triangle(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 1000 85', preserveaspectratio='none')
                         polygon(points='0,0   0,86   500.8,86   500.8,75.5' class="" + customLeft)
                         polygon(points='1000,0   1000,86   500,86   500,75.5' class="" + customRight)
-        .down-arrow-button.clearfix
-                a.down-arrow-button__link
-                        svg.down-arrow-button__svg()
-                                use(xlink:href="assets/img/sprite.svg#arrow_down")
-        

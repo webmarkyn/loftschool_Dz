@@ -1,0 +1,171 @@
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    &__main{
+        width: 100%;
+        background: #373e42;
+        opacity: .85;
+        padding: 1.8rem;
+        float: left;
+
+        @include phone{
+            padding: 1.4rem;
+        } 
+    }
+
+    &__info, &__nav-and-socials, &__quote{
+            width: 33.3%;
+            height: 100%;
+            float: left;
+            border-right: 1px solid #5f6568;
+            color: #ffffff;
+    }
+
+    &__info{
+        min-height: 8vh;
+
+        @include tablet{
+            width: 50% ;
+        }       
+
+        @include phone{
+            text-align: center;
+            width: 100%;
+            padding: 0;
+            font-size: .9rem;
+            border-right: none;
+            border-bottom: 1px solid #5f6568;
+            padding-bottom: 1rem;
+        } 
+    }
+
+    &__nav-and-socials{
+         padding: 0 25px; 
+
+        @include tablet{
+            width: 50% ;
+            border: none;
+            padding-right: 0;
+            font-size: 0.9rem;
+        }  
+
+        @include phone{
+            width: 100%;
+            font-size: 0.9rem;
+            padding: 0;
+            border-right: none;
+            border-bottom: 1px solid #5f6568;
+            margin-top: 2rem;
+            font-size: 0.86rem;
+            padding-bottom: 1rem;
+        }           
+    }
+
+    &__nav{
+
+        & a{
+            font-family: "Roboto-Bold";
+            color: #ffffff;
+            text-decoration: none;
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+                
+    }
+
+    & .footer__nav{
+        margin-top: 0;
+        padding: 0;               
+    }
+
+    &__item{
+        display: inline-block;
+        margin-right: 0.6rem;
+
+        @include phone{
+            margin-right: 0.2rem;
+        }      
+    }
+
+    &__socials{
+        
+        .social-icons{
+            @include phone{
+                margin: 0 auto;
+                float: none;
+                width: 11rem;
+            }
+
+            .icon-holder:last-child{
+                @include phone{
+                    margin: 0;
+                } 
+            }
+        }
+        
+    }
+
+    & .custom-icon{
+        opacity: .45;
+
+        &:hover{
+            fill: #FFF;
+            opacity: 1;
+            transition: 0s;
+        }
+    }
+
+    & span{
+        float: left;
+        max-width: 356px;
+        opacity: .5;
+    }
+
+    &__quote{
+        padding-left: 30px;
+        border-right: none;
+        font-style: italic;
+
+        @include tablet{
+            width: 100% ;
+            padding: 0;
+            margin-top: 2rem
+        }
+
+        @include phone{
+            width: 100%;
+            padding: 0;
+            margin-top: 1rem;
+            text-align: center;
+        } 
+
+        & p{
+            margin-top: 0;
+            opacity: .5;
+        }
+
+        & b{
+            opacity: .75;
+        }
+    }
+
+    &__copyrights{
+        width: 100%;
+        height: 2.3rem;
+        background: #6c9c5a;
+        opacity: .85;
+        line-height: 2.3rem;
+        color: #ffffff;
+        text-align: center;
+        float: left;
+
+        @include phone{
+            line-height: 1.6rem;
+            height: 3.3rem;
+        } 
+    }
+}

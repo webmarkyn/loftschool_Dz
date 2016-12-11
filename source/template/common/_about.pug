@@ -1,0 +1,73 @@
+.container
+    - var customLeft = 'left';
+    - var customRight = 'right';
+    include ../partials/__header
+    .about.clearfix
+        .about__info
+            .about__page-title
+                        .about__svg
+                                svg.svg-page-title
+                                        use(xlink:href="assets/img/sprite.svg#" + title_private + "_header")
+                        .about__page-name 
+                                span.page-name.separator #{title_public}
+            .about__description
+                .about__avatar
+                    img(src="/assets/img/avatars/avatar_about.png", alt="").about__image
+                h2.about__title.separator Кто я
+                span.about__text
+                    |Я веб разработчик из Донецка. Мне 15 лет.  Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                    |<p>Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
+                    | Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!</p>
+        .about__skills
+            h2.about__title.separator Чем я могу быть вам полезен
+            span.about__skills-description Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные 
+                |задачи на Backend. Но давайте по порядку.
+            .about__diagrams
+                .section
+                    h3.section__title Frontend
+                    - var frontend = ['HTML5', 'CSS3', 'Javascript & JQuery']
+                    .about__diagram-section-inner
+                        each element in frontend
+                            .diagram 
+                                svg.circle
+                                    circle(r='50', cx='60', cy='60', stroke='#dfdcd5', fill='none')
+                                    circle.sector(r='50', cx='60', cy='60', stroke='#74a163', transform='rotate(-90 60 60)')
+                                span.diagram__title #{element}
+                .section
+                    h3.section__title Backend
+                    - var backend = ['PHP', 'mySQL', 'Node.js & npm', 'Mongo.db']
+                    .about__diagram-section-inner
+                        each element in backend
+                            .diagram 
+                                svg.circle
+                                    circle(r='50', cx='60', cy='60', stroke='#dfdcd5', fill='none')
+                                    circle.sector(r='50', cx='60', cy='60', stroke='#74a163', transform='rotate(-90 60 60)')
+                                span.diagram__title #{element}
+                .section
+                    h3.section__title Workflow
+                    - var workflow = ['Git', 'Gulp', 'Bower']
+                    .about__diagram-section-inner
+                        each element in workflow
+                            .diagram 
+                                svg.circle
+                                    circle(r='50', cx='60', cy='60', stroke='#dfdcd5', fill='none')
+                                    circle.sector(r='50', cx='60', cy='60', stroke='#74a163', transform='rotate(-90 60 60)')
+                                span.diagram__title #{element}
+    .map-and-contacts
+        .map-and-contacts__map
+        .map-and-contacts__contacts
+            h2.map-and-contacts__contacts__title.separator Контакты
+            ul.map-and-contacts__contacts__list
+                li.map-and-contacts__contacts__list__item
+                    i.fa.fa-skype
+                    |markyn546
+                li.map-and-contacts__contacts__list__item
+                    i.fa.fa-envelope
+                    |web.markyn@gmail.com
+                li.map-and-contacts__contacts__list__item
+                    i.fa.fa-phone
+                    |+380504702656
+                li.map-and-contacts__contacts__list__item
+                    i.fa.fa-map-marker
+                    |Донецк
+    include ../partials/__footer

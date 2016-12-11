@@ -1,24 +1,36 @@
 .container
     include ../partials/__header
-    
+    .works-page-title
+                .works-page-title__svg
+                        svg.svg-page-title
+                                use(xlink:href="assets/img/sprite.svg#" + title_private + "_header")
+                .works-page-title__page-name 
+                        span.page-name #{title_public}
     .works
-        .works__slide-info
-            .works__slide-info__container
-                span.works__slide-info__container__slide-name.separator Сайт школы онлайн образования
-                span.works__slide-info__container__technologies HTML,CSS,JAVASCRIPT
-                a(href="#").works__slide-info__container__watch-button
+        .works__slide-info.slide-info-big-screen
+            .works__container
+                span.works__slide-name.separator Сайт школы онлайн образования
+                span.works__technologies HTML,CSS,JAVASCRIPT
+                a(href="#").works__watch-button
                     i.fa.fa-link
                     |Посмотреть сайт
         .works__slider
-            .works__slider__current-slide
-                .works__slider__current-slide__image
+            .works__current-slide
+                .works__image
                     img(src="/assets/img/slider/work-1.png", alt="").current-slide
-            .works__slider__navigation
-                .works__slider__navigation__previous
+            .works__slide-info.slide-info-small-screen
+                .works__container
+                    span.works__slide-name.separator Сайт школы онлайн образования
+                    span.works__technologies HTML,CSS,JAVASCRIPT
+                    a(href="#").works__watch-button
+                        i.fa.fa-link
+                        |Посмотреть сайт
+            .works__navigation
+                .works__previous
                     img(src="/assets/img/slider/work-2.png", alt="").previous-slide
                     svg
                         use(xlink:href="assets/img/sprite.svg#portf_arrow_down")
-                .works__slider__navigation__next
+                .works__next
                     img(src="/assets/img/slider/work-3.png", alt="").next-slide
                     svg
                         use(xlink:href="assets/img/sprite.svg#portf_arrow_up")
@@ -27,10 +39,10 @@
             svg.svg-title
                 use(xlink:href="assets/img/sprite.svg#about_header")
             h3.title.separator 
-                span Что обо мне говорят
+                |Что обо мне говорят
         .about-me__comments.clearfix
-            .about-me__comments__first-comment
-                .comment-avatar-holder.personal-info__avatar
+            .about-me__first-comment.clearfix
+                .comment-avatar-holder
                     img(src="/assets/img/avatars/avatar_dima.png", alt="").avatar
                 .comment
                     span.comment__text 
@@ -38,8 +50,8 @@
                         | а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
                     span.comment__author Ковальчук Дмитрий
                     span.comment__position — основатель Loftschool
-            .about-me__comments__second-comment
-                .comment-avatar-holder.personal-info__avatar
+            .about-me__second-comment.clearfix
+                .comment-avatar-holder
                     img(src="/assets/img/avatars/avata_zakharovr.png", alt="").avatar
                 .comment
                     span.comment__text 
@@ -67,8 +79,8 @@
                         button.login-form-button(type="submit") Отправить
                         button.login-form-button(type="reset") Очистить
         .arrow-up
-            a.arrow-up__link
-                svg.arrow-up__link__svg
+            a(href="#header").arrow-up__link
+                svg.arrow-up__svg
                     use(xlink:href="assets/img/sprite.svg#portf_arrow_up")
 
     include ../partials/__footer
