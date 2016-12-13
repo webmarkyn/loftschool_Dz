@@ -1,0 +1,49 @@
+.wrapper
+	.top-shadow
+	.bottom-shadow
+	button.authorization-button#authorize Авторизоваться
+	.welcome-wrap#flipWrap
+		.welcome-inner
+			.welcome-box.front
+				- var personalInfoCustom = "personal-info-custom"
+				include ../partials/__personal-info
+				include ../partials/__social-icons
+				.welcome-buttons
+					button.welcome-button
+						a(href='/works.html') Мои работы
+					button.welcome-button
+						a(href='/about.html') Обо мне
+					button.welcome-button
+						a(href='/blog.html') Блог
+			.login-box.back
+				h2.separator Авторизуйтесь
+				form.login-form(
+                name='login-form'
+                method='post')
+					label(for='login')
+						i.fa.fa-user
+					input#login(
+						type='text'
+						placeholder='Логин')
+					label(for='password')
+						i.fa.fa-key
+					input#password(
+						type='password'
+						placeholder='Пароль')
+					input(type='checkbox')#arentrobot
+					label(for='arentrobot') Я человек
+						span Вы точно не робот?
+					input#yes(
+						type='radio'
+						name='robot_security'
+						value='Yes')
+					label.login-radio(for='yes') Да
+					input#no(
+						type='radio'
+						name='robot_security'
+						value='No')
+					label.login-radio(for='no') Не уверен
+					.login-form-buttons
+						button.login-form-button#backToMain На главную
+						button.login-form-button Войти
+	.copyright © Марк Байдебура | создано с любовью в LoftSchool | 2016

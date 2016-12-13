@@ -1,9 +1,12 @@
 extends ../_template
 
 block variables
-  - var title_public = 'Мои работы'
-  - var title_private = 'works'
+  - var title_public = 'Обо мне'
+  - var title_private = 'about'
+  - var frontend = ['HTML5', 'CSS3', 'Javascript & JQuery']
+  - var backend = ['PHP', 'mySQL', 'Node.js & npm', 'Mongo.db']
+  - var workflow = ['Git', 'Gulp', 'Bower']
 
 block content
-  include ../common/_works
+  include ../common/_welcome
   
