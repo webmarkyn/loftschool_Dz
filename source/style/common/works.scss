@@ -160,7 +160,7 @@
 
         @include tablet{
             display: block;
-            height: 25%;
+            height: 35%;
             width: 100%;
         }
 
@@ -278,6 +278,36 @@
         @include phone{
             width: 100%;
         }
+
+        .slider__list{
+            list-style: none;
+            margin: 0;
+            padding:0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .slider__item{
+            position: absolute;
+            top: -100%;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+
+            &.active{
+                top: 0;
+            }
+
+            &.slider__item-up{
+                top: 100%;
+
+                &.active{
+                    top: 0;
+                }
+            }
+        }
     }
 
     &__current-slide{
@@ -286,7 +316,7 @@
         width: 100%;
 
         @include tablet{
-            height: 50%;
+            height: 45%;
         }
 
         @include phone{
@@ -325,7 +355,7 @@
         float: left;
 
         @include tablet{
-            height: 25%;
+            height: 20%;
         }
 
         @include phone{
@@ -345,6 +375,7 @@
         width: 50%;
         height: 100%;
         position: relative;
+        overflow: hidden;
 
         &:after{
             content: '';
@@ -370,21 +401,23 @@
             width: 21vw;
             max-width: 9rem;
             position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
+            top:0;
+            bottom:0;
+            left:0;
+            right:0;
 
             @include tablet{
                 width: 15vw;
-                max-width: 12rem;
+                max-width: 8rem;
             }
 
             @include phone{
                 width: 24vw;
-                max-width: 12rem;
+                max-width: 8rem;
             }
         }
+
+
         & svg{
             position: absolute;
             width: 2.75rem;
@@ -404,7 +437,7 @@
 }
 .about-me{
     float: left;
-    height: 85rem;
+    height: 88rem;
     width: 100%;
     overflow: hidden;
     background: url("/assets/img/backgrounds/what_about_bg.png");
@@ -627,19 +660,19 @@
     &__link{
         float: left;
         height: 1rem;
-        width: 1.5rem;   
-    }
-
-    &__svg{
-        height: 100%;
-        width: 100%;
-        fill: #ffffff;
-        opacity: .7;
+        width: 1.5rem;
+        opacity: .7; 
 
         &:hover{
             opacity: .9;
             transition: .3s ease;
             cursor: pointer;
         } 
+    }
+
+    &__svg{
+        height: 100%;
+        width: 100%;
+        fill: #ffffff;   
     }
 }

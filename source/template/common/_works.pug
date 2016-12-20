@@ -26,12 +26,28 @@
                         i.fa.fa-link
                         |Посмотреть сайт
             .works__navigation
-                .works__previous
-                    img(src="/assets/img/slider/work-2.png", alt="").previous-slide
+                .works__previous.js-slider.js-slider-down(data-slider="previous")
+                    ul.slider__list
+                        li.slider__item.active
+                            img(src="/assets/img/slider/work-1.png", alt="").previous-slide
+                        li.slider__item
+                            img(src="/assets/img/slider/work-2.png", alt="").previous-slide
+                        li.slider__item
+                            img(src="/assets/img/slider/work-3.png", alt="").previous-slide
+                        li.slider__item
+                            img(src="/assets/img/slider/work-4.png", alt="").previous-slide
                     svg
                         use(xlink:href="assets/img/sprite.svg#portf_arrow_down")
-                .works__next
-                    img(src="/assets/img/slider/work-3.png", alt="").next-slide
+                .works__next.js-slider.js-slider-up(data-slider="next")
+                    ul.slider__list
+                        li.slider__item.slider__item-up.active
+                            img(src="/assets/img/slider/work-1.png", alt="").next-slide
+                        li.slider__item.slider__item-up
+                            img(src="/assets/img/slider/work-2.png", alt="").next-slide
+                        li.slider__item.slider__item-up
+                            img(src="/assets/img/slider/work-3.png", alt="").next-slide
+                        li.slider__item.slider__item-up
+                            img(src="/assets/img/slider/work-4.png", alt="").next-slide
                     svg
                         use(xlink:href="assets/img/sprite.svg#portf_arrow_up")
     .about-me

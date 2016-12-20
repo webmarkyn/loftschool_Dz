@@ -77,9 +77,13 @@
                 
     }
 
-    & .footer__nav{
+    .footer__nav{
         margin-top: 0;
-        padding: 0;               
+        padding: 0; 
+
+        @include phone{
+            text-align: center;
+        }             
     }
 
     &__item{
@@ -123,6 +127,10 @@
         float: left;
         max-width: 356px;
         opacity: .5;
+
+        @include phone{
+            float: none;
+        } 
     }
 
     &__quote{
