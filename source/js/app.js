@@ -1,3 +1,61 @@
+//Preloader
+var preloader = (function(){
+    var percentsTotal = 1,
+        preloader = $('.preloader');
+
+    var imgPath = $('*').map(function (ndx, element) {
+        var background = $(element).css('background-image'),
+            img = $(element).is('img'),
+            path = '';
+
+        if (background != 'none' && background.indexOf('-gradient') == 0) {
+            path = background.replace('url("', '').replace('")', '');
+        }
+
+        if (img) {
+            path = $(element).attr('src');
+        }
+
+        if (path) return path
+    });
+
+    var setPercents = function (total, current) {
+        var persents = Math.ceil(current / total * 100);
+
+        $('.preloader__percents').text(persents + '%');
+
+        if (persents >= 100) {
+            preloader.fadeOut();
+        }
+    };
+
+    var loadImages = function (images) {
+
+        if (!images.length) preloader.fadeOut();
+
+        images.forEach(function (img, i, images) {
+            var fakeImage = $('<img>', {
+                attr : {
+                    src : img
+                }
+            });
+
+            fakeImage.on('load error', function () {
+                setPercents(images.length, percentsTotal);
+                percentsTotal++;
+            });
+        });
+    };
+
+    return {
+        init: function () {
+            var imgs = imgPath.toArray();
+            loadImages(imgs);
+        }
+    }
+
+}());
+
 //FLIPPER
 var flipper = (function() {
     var flipFunc = function(buttonId, containerID){
@@ -20,6 +78,7 @@ var slider = (function () {
         sliderPreviewContainer = $('.works__current-slide'),
         sliderInfoContainer = $('.works__slide-info'),
         flag = true;
+
 
     var moveSlide = function (container, direction) {
         var items = container.find('.slider-nav__item'),
@@ -72,9 +131,22 @@ var slider = (function () {
     };
 
     var moveSlideinfo = function () {
-      var items =  sliderInfoContainer.find('.slider-info__item'),
+      var activeContainer;
+
+        sliderInfoContainer.each(
+            function (index) {
+                if ($(this).css('display') !== 'none') {
+                    activeContainer = $(this);
+                }
+            }
+        );
+
+
+        var items =  activeContainer.find('.slider-info__item'),
           activeItem = items.filter('.active'),
           requeItem = items.eq(counter);
+
+
 
         activeItem.animate({
             'left': '-150%'
@@ -125,4 +197,5 @@ var slider = (function () {
 $(function () {
     slider.init();
     flipper.init();
+    preloader.init();
 });

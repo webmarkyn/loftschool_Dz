@@ -18,3 +18,26 @@ fix {
 .clearfix:after {
     clear: both;
 }
+
+.preloader{
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  position: fixed;
+  background-image: url('../img/backgrounds/forest_prel_bg.jpg');
+}
+
+.preloader__svg{
+  fill: #FFF;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 10rem;
+  width: 8rem;
+  text-align: center;
+}
