@@ -41,3 +41,38 @@ fix {
   width: 8rem;
   text-align: center;
 }
+.first {
+  stroke-dasharray: 56 40;
+  stroke-dashoffset: 24;
+  animation: wave-first 2s linear infinite;
+}
+
+.second {
+  stroke-dasharray: 56 40;
+  stroke-dashoffset: 48;
+  animation: wave-second 2s linear infinite;
+}
+
+.third {
+  stroke-dasharray: 56 40;
+  stroke-dashoffset: 72;
+  animation: wave-third 2s linear infinite;
+}
+
+@keyframes wave-first {
+  to {
+    stroke-dashoffset: -72;
+  }
+}
+
+@keyframes wave-second {
+  to {
+    stroke-dashoffset: -48;
+  }
+}
+
+@keyframes wave-third {
+  to {
+    stroke-dashoffset: -24;
+  }
+}

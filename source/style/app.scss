@@ -1,3 +1,5 @@
+@import 'common/main';
+
 
 //mixins
 @import 'mixins/font-face';
@@ -9,8 +11,8 @@
 @import 'partials/personal-info';
 
 //styles
-@import 'common/main';
 @import 'common/works';
+@import 'common/menu';
 @import 'common/about';
 @import 'common/login';
 @import 'common/blog';

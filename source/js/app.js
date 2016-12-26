@@ -71,6 +71,26 @@ var flipper = (function() {
 }());
 //FLIPPER END
 
+//Parallax
+var parallax = (function () {
+    var backgroundImage = $('.header__bg'),
+        user = $('.personal-info'),
+        backgroundText = $('.header__svg-background-block');
+
+    return {
+        move: function (block, windowScroll, strafeAmount) {
+            var parallaxStrafe = windowScroll / strafeAmount + '%';
+            block.css('top', '' + parallaxStrafe);
+        },
+        init: function (wScroll) {
+            this.move(user, wScroll , 15);
+            this.move(backgroundImage, wScroll , 45);
+            this.move(backgroundText, wScroll , 25);
+        }
+    }
+}());
+//Parallax end
+
 //SLIDER
 var slider = (function () {
     var counter = 0,
@@ -193,9 +213,126 @@ var slider = (function () {
 }());
 //SLIDER END
 
+var smoothScroll = (function () {
+    var scrollLinks = $('.js-smooth-scroll'),
+        id,
+        top;
+
+    var scrollFunction = function (e) {
+        e.preventDefault();
+
+        id = $(this).attr('href');
+        top = $(id).offset().top;
+
+        $('body,html').animate({scrollTop: top}, 1500);
+    };
+
+    var activateScroll = function () {
+        scrollLinks.on('click', scrollFunction)
+    };
+
+    return {
+        init : function () {
+            activateScroll()
+        }
+    }
+}());
+
+
+var activatePost = (function () {
+    var posts = $('.post'),
+        postsList = $('.blog-sidebar__posts-list__item');
+        postsArray = [];
+
+    var makePostActive = function (wScroll) {
+        posts.each(function (index) {
+            postsArray.push($(this))
+        });
+        postsList.removeClass('active');
+        for (var i = 0 ;i < posts.length;i++){
+            if (postsArray[i - 1] == undefined) {
+                if (wScroll < postsArray[i].offset().top){
+                    postsList.eq(i).addClass('active');
+                }else {
+                }
+            }else {
+                if (wScroll < postsArray[i].offset().top && wScroll > postsArray[i - 1].offset().top){
+                    postsList.eq(i).addClass('active');
+                }else {
+                }
+            }
+
+        }
+        postsArray = [];
+    };
+
+
+
+    return {
+        init: function (wScroll) {
+            makePostActive(wScroll);
+        }
+    }
+}());
+
+var sidebarScroll = (function () {
+   var sidebar = $('.blog-sidebar'),
+       main = $('.blog-main');
+
+    var scrollCheck = function (wScroll) {
+       if (wScroll >= main.offset().top) {
+           sidebar.addClass('active')
+       }
+       else {
+           sidebar.removeClass('active')
+       }
+   };
+
+   return {
+       init: function(wScroll){
+           scrollCheck(wScroll)
+       }
+   }
+}());
+
+var menu = (function () {
+    var menuLink = $('.menu__link'),
+        menu = $('.menu-full'),
+        flag = true;
+
+    var openMenu = function (e) {
+        e.preventDefault();
+        menuLink.toggleClass('active');
+        if (flag == false) {menu.fadeOut(300);flag = true}else{menu.fadeIn(300);flag = false}
+    };
+
+    var activateMenu = function () {
+        menuLink.on('click', openMenu)
+    };
+
+    return {
+        init: function () {
+            activateMenu();
+        }
+    }
+}());
+
 //Init
 $(function () {
     slider.init();
     flipper.init();
     preloader.init();
+    smoothScroll.init();
+    menu.init();
+
+
+    // Parallax
+    window.onscroll = function () {
+        var wScroll = window.pageYOffset;
+        parallax.init(wScroll);
+        if ($('.blog-sidebar').offset() !== undefined) {
+            activatePost.init(wScroll);
+            sidebarScroll.init(wScroll);
+        }
+    }
 });

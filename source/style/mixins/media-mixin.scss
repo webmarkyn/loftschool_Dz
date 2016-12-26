@@ -16,7 +16,7 @@ $phone-width: 320px;
 }
 
 @mixin phone {
-  @media (min-width: #{$phone-width}) and (max-width: #{$tablet-width - 1px}) {
+  @media (max-width: #{$tablet-width - 1px}) {
     @content;
   }
 }

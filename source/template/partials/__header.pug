@@ -1,5 +1,7 @@
 .header#header
         include ../partials/__top-shadow
+        .header__bg
+                img(src="assets/img/backgrounds/water.jpg")
         .header__svg-background-block
                 svg.svg-background
                         use(xlink:href="assets/img/sprite.svg#portfolio_header")
@@ -17,7 +19,7 @@
                         polygon(points='0,0   0,86   500.8,86   500.8,75.5' class="" + customLeft)
                         polygon(points='1000,0   1000,86   500,86   500,75.5' class="" + customRight)
         .down-arrow-button.clearfix
-                a.down-arrow-button__link
+                a.down-arrow-button__link.js-smooth-scroll(href="#footer")
                         svg.down-arrow-button__svg()
                                 use(xlink:href="assets/img/sprite.svg#arrow_down")
         
