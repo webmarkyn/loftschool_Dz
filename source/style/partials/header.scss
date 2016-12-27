@@ -1,6 +1,5 @@
 .header{
     height: 100vh;
-    background: url("../img/backgrounds/water.jpg");
     background-size: cover;
     position: relative;
     overflow: hidden;
@@ -30,8 +29,12 @@
         }
 
         &__svg-background-block{
+            top: 0;
+            position: absolute;
             height: 100%;
             width: 77%;
+            left: 0;
+            right: 0;
             margin: 0 auto;
 
             .svg-background{
@@ -42,6 +45,19 @@
             }
         }
 }
+
+.header__bg{
+    height: 100%;
+    width: 100%;
+    position: relative;
+
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
 .menu{
     position: absolute;
     top: 0;
@@ -54,14 +70,21 @@
             padding: 0 30px;
 
             & .menu__icon{
+                z-index: 600;
+                position: absolute;
+                right: 30px;
                 float: right;
                 width: 35px;
                 height: 35px;
 
                 & .menu__link{
+                    display: block;
                     height: 35px;
                     width: 35px;
 
+                    &.active{
+                        position: fixed;
+                    }
 
                     & .hamburger{
                     fill: #f8f9f5;

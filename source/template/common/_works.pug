@@ -9,29 +9,93 @@
     .works
         .works__slide-info.slide-info-big-screen
             .works__container
-                span.works__slide-name.separator Сайт школы онлайн образования
-                span.works__technologies HTML,CSS,JAVASCRIPT
-                a(href="#").works__watch-button
-                    i.fa.fa-link
-                    |Посмотреть сайт
+                ul.slider-info__list
+                    li.slider-info__item.active
+                        span.works__slide-name.separator Сайт школы онлайн образования
+                        span.works__technologies HTML,CSS,JAVASCRIPT
+                        a(href="#").works__watch-button
+                            i.fa.fa-link
+                            | Посмотреть сайт
+                    li.slider-info__item
+                        span.works__slide-name.separator Сайт школы онлайн образования2
+                        span.works__technologies HTML,CSS,JAVASCRIPT2
+                        a(href="#").works__watch-button
+                            i.fa.fa-link
+                            | Посмотреть сайт2
+                    li.slider-info__item
+                        span.works__slide-name.separator Сайт школы онлайн образования3
+                        span.works__technologies HTML,CSS,JAVASCRIPT3
+                        a(href="#").works__watch-button
+                            i.fa.fa-link
+                            | Посмотреть сайт3
+                    li.slider-info__item
+                        span.works__slide-name.separator Сайт школы онлайн образования4
+                        span.works__technologies HTML,CSS,JAVASCRIPT4
+                        a(href="#").works__watch-button
+                            i.fa.fa-link
+                            | Посмотреть сайт4
         .works__slider
             .works__current-slide
-                .works__image
-                    img(src="/assets/img/slider/work-1.png", alt="").current-slide
+                ul.current-slide__list
+                    li.current-slide__item.active
+                        img(src="/assets/img/slider/work-1.png", alt="").current-slide
+                    li.current-slide__item
+                        img(src="/assets/img/slider/work-2.png", alt="").current-slide
+                    li.current-slide__item
+                        img(src="/assets/img/slider/work-3.png", alt="").current-slide
+                    li.current-slide__item
+                        img(src="/assets/img/slider/work-4.png", alt="").current-slide
+                //img(src="/assets/img/slider/work-1.png", alt="").current-slide
             .works__slide-info.slide-info-small-screen
                 .works__container
-                    span.works__slide-name.separator Сайт школы онлайн образования
-                    span.works__technologies HTML,CSS,JAVASCRIPT
-                    a(href="#").works__watch-button
-                        i.fa.fa-link
-                        |Посмотреть сайт
+                    ul.slider-info__list
+                        li.slider-info__item.active
+                            span.works__slide-name.separator Сайт школы онлайн образования
+                            span.works__technologies HTML,CSS,JAVASCRIPT
+                            a(href="#").works__watch-button
+                                i.fa.fa-link
+                                |Посмотреть сайт
+                        li.slider-info__item
+                            span.works__slide-name.separator Сайт школы онлайн образования2
+                            span.works__technologies HTML,CSS,JAVASCRIPT2
+                            a(href="#").works__watch-button
+                                i.fa.fa-link
+                                | Посмотреть сайт2
+                        li.slider-info__item
+                            span.works__slide-name.separator Сайт школы онлайн образования3
+                            span.works__technologies HTML,CSS,JAVASCRIPT3
+                            a(href="#").works__watch-button
+                                i.fa.fa-link
+                                | Посмотреть сайт3
+                        li.slider-info__item
+                            span.works__slide-name.separator Сайт школы онлайн образования4
+                            span.works__technologies HTML,CSS,JAVASCRIPT4
+                            a(href="#").works__watch-button
+                                i.fa.fa-link
+                                | Посмотреть сайт4
             .works__navigation
-                .works__previous
-                    img(src="/assets/img/slider/work-2.png", alt="").previous-slide
+                .works__previous.js-slider.js-slider-down(data-slider="previous")
+                    ul.slider-nav__list
+                        li.slider-nav__item.active
+                            img(src="/assets/img/slider/work-1.png", alt="").previous-slide
+                        li.slider-nav__item
+                            img(src="/assets/img/slider/work-2.png", alt="").previous-slide
+                        li.slider-nav__item
+                            img(src="/assets/img/slider/work-3.png", alt="").previous-slide
+                        li.slider-nav__item
+                            img(src="/assets/img/slider/work-4.png", alt="").previous-slide
                     svg
                         use(xlink:href="assets/img/sprite.svg#portf_arrow_down")
-                .works__next
-                    img(src="/assets/img/slider/work-3.png", alt="").next-slide
+                .works__next.js-slider.js-slider-up(data-slider="next")
+                    ul.slider-nav__list
+                        li.slider-nav__item.slider-nav__item-up.active
+                            img(src="/assets/img/slider/work-1.png", alt="").next-slide
+                        li.slider-nav__item.slider-nav__item-up
+                            img(src="/assets/img/slider/work-2.png", alt="").next-slide
+                        li.slider-nav__item.slider-nav__item-up
+                            img(src="/assets/img/slider/work-3.png", alt="").next-slide
+                        li.slider-nav__item.slider-nav__item-up
+                            img(src="/assets/img/slider/work-4.png", alt="").next-slide
                     svg
                         use(xlink:href="assets/img/sprite.svg#portf_arrow_up")
     .about-me
@@ -79,7 +143,7 @@
                         button.login-form-button(type="submit") Отправить
                         button.login-form-button(type="reset") Очистить
         .arrow-up
-            a(href="#header").arrow-up__link
+            a(href="#header").arrow-up__link.js-smooth-scroll
                 svg.arrow-up__svg
                     use(xlink:href="assets/img/sprite.svg#portf_arrow_up")
 
